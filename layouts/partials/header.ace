@@ -1,7 +1,7 @@
 title {{ .Title }}
 meta http-equiv="Content-Type" content="text/html;charset=utf-8"
 
-{{ $mun_style := .Site.Params.mun_style }}
+{{ $mun_style := "//www.mun.ca/appinclude/brand/2011v1/include/styles" }}
 {{ $style_base := .Site.BaseURL }}
 
 link rel="stylesheet" href="{{ $mun_style }}/base.css"
