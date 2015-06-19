@@ -1,4 +1,5 @@
-# Hugo theme for websites at Memorial University
+# hugo-memorial-theme
+## A theme for websites at Memorial University
 
 To get started, clone this repository into your website, e.g.:
 
