@@ -1,8 +1,4 @@
 = content main
-  {{ with .Params.logo }}
-    img class="pageLogo" src="{{ .src }}" alt="{{ .text }}"
-  {{ end }}
-
   {{ with .Params.due }}
     div.deadline {{ . }}
   {{ end }}

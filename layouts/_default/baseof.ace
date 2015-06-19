@@ -15,7 +15,12 @@ html lang=en
 
             #contentTop
             #middle
+              {{ with .Params.logo }}
+                img class="pageLogo" src="{{ .src }}" alt="{{ .text }}"
+              {{ end }}
+
               h1 {{ .Title }}
+
               = yield main
 
             .clear
