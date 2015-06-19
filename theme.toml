@@ -1,0 +1,5 @@
+author = "Jonathan Anderson <jonathan.anderson@mun.ca>"
+description = "A theme for sites at Memorial University of Newfoundland."
+license = "MIT"
+name = "memorial"
+source_repo = "https://github.com/MUSEC/hugo-memorial.git"

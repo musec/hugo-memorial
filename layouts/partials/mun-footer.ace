@@ -1,0 +1,16 @@
+#footer
+  #footerText
+    {{ HTML "Copyright &copy; " }}
+    {{ if .IsPage }}
+      {{ .Date.Format "2006" }}
+    {{ else }}
+      {{ .Site.LastChange.Format "2006" }}
+    {{ end }}
+
+    {{ HTML "&nbsp;" }}
+
+    {{ if .Params.author }}
+      {{ .Params.author }}
+    {{ else }}
+      {{ .Site.Params.author }}
+    {{ end }}

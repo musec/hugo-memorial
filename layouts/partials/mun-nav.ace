@@ -1,0 +1,12 @@
+ul
+  {{ range . }}
+    li
+      a href="{{ .Url }}" {{ .Name }}
+
+      {{ if .HasChildren }}
+        ul
+          {{ with .Children }}
+            {{ partial "mun-nav" . }}
+          {{ end }}
+      {{ end }}
+  {{ end }}

@@ -1,0 +1,40 @@
+= doctype html
+
+html lang=en
+  head
+    {{ partial "header" . }}
+
+  body
+    #uber
+      #sububer
+        #pageContent
+          {{ partial "mun-header" . }}
+
+          #content
+            {{ partial "leftnav" . }}
+
+            #contentTop
+            #middle
+              h1 {{ .Title }}
+              = yield main
+
+            .clear
+
+          #bottomSiteInclude
+
+          #footer
+            #footerText
+              {{ HTML "Copyright &copy; " }}
+              {{ if .IsPage }}
+                {{ .Date.Format "2006" }}
+              {{ else }}
+                {{ .Site.LastChange.Format "2006" }}
+              {{ end }}
+
+              {{ HTML "&nbsp;" }}
+
+              {{ if .Params.author }}
+                {{ .Params.author }}
+              {{ else }}
+                {{ .Site.Params.author }}
+              {{ end }}
