@@ -1,7 +1,7 @@
 ul
   {{ range . }}
     li
-      a href="{{ .Url }}" {{ .Name }}
+      a href="{{ .URL }}" {{ .Name }}
 
       {{ if .HasChildren }}
         ul
