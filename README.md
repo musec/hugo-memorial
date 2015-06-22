@@ -1,6 +1,17 @@
 # hugo-memorial-theme
 ## A theme for websites at Memorial University
 
+### WARNING
+
+This theme relies on Hugo bug fixes that have not yet been merged to the
+mainline tree.
+Until [this pull request](https://github.com/spf13/hugo/pull/1216)
+is merged, you will need to use
+[a patched Hugo](https://github.com/trombonehero/hugo/tree/theme-baseoface).
+
+
+### Getting started
+
 To get started, clone this repository into your website, e.g.:
 
 ```shell
