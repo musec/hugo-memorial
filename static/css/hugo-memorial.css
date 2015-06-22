@@ -50,9 +50,6 @@ th {
 td {
   font-size: 12px;
 }
-#navcontainer ul ul ul ul {
-  display: none;
-}
 pre.highlight {
   border: 1px solid;
   padding: 0.25em;
