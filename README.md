@@ -33,6 +33,24 @@ hugo --theme=memorial                      # for staging
 rsync -avz public/ host:path/to/website/   # deployment
 ```
 
+
+### Customization
+
+#### Style
+
+Additional stylesheets can be declared in your site's Hugo config file, e.g.:
+
+```yaml
+params:
+  extra_style:
+    - style/calendar.css
+    - style/menu.css
+    - style/news.css
+```
+
+
+#### Site hierarchy
+
 To situate your site within a larger hierarchy (e.g., creating a course website
 that fits within a larger academic website), create a
 `layouts/partials/leftnav.ace` (or HTML, or whatever templating language you

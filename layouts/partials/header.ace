@@ -12,6 +12,10 @@ link rel="stylesheet" href="{{ $mun_style }}/news.css"
 link rel="stylesheet" href="{{ $mun_style }}/icalendar.css"
 link rel="stylesheet" href="{{ $style_base }}/css/hugo-memorial.css"
 
+{{ range .Site.Params.extra_style }}
+  link rel="stylesheet" href="{{ $style_base }}/{{ . }}"
+{{ end }}
+
 script type="text/javascript" src="{{ .Site.BaseUrl }}/js/jquery.min.js"
 script src="https://yandex.st/highlightjs/8.0/highlight.min.js"
 = javascript
