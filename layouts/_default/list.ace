@@ -1,0 +1,7 @@
+= content main
+  ul
+    {{ range .Data.Pages }}
+      li
+        a href="{{ .Permalink }}" {{ .Title }}
+        .summary {{ .Summary }}
+    {{ end }}
