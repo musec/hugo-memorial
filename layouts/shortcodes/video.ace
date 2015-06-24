@@ -1,0 +1,1 @@
+video width={{ .Get "width" }} height={{ .Get "height" }} src={{ .Get "src" }} controls="true"
