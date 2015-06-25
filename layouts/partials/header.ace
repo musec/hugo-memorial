@@ -15,8 +15,3 @@ link rel="stylesheet" href="{{ $style_base }}/css/hugo-memorial.css"
 {{ range .Site.Params.extra_style }}
   link rel="stylesheet" href="{{ $style_base }}/{{ . }}"
 {{ end }}
-
-script type="text/javascript" src="{{ .Site.BaseURL }}/js/jquery.min.js"
-script src="https://yandex.st/highlightjs/8.0/highlight.min.js"
-= javascript
-  hljs.initHighlightingOnLoad();
