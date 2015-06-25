@@ -3,6 +3,7 @@
 html lang=en
   head
     {{ partial "header" . }}
+    = yield extra_header_content
 
   body
     #uber
@@ -29,6 +30,7 @@ html lang=en
               = yield main
                 | ERROR: template for {{ .LogicalName }} does not produce 'main'
 
+              = yield extra_body_content
             .clear
 
           #bottomSiteInclude
