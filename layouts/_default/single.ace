@@ -1,6 +1,2 @@
 = content main
-  {{ with .Params.due }}
-    div.deadline {{ . }}
-  {{ end }}
-
   {{ .Content }}
