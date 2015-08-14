@@ -1,12 +1,14 @@
-ul
-  {{ range . }}
-    li
-      a href="{{ .URL }}" {{ .Name }}
+{{ range .Site.Menus.main }}
+  li
+    a href="{{ .URL }}" class="{{ if ($.IsMenuCurrent "main" .) }}leftnavon{{ end }}" {{ .Name }}
 
+    {{ if (or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .)) }}
       {{ if .HasChildren }}
         ul
-          {{ with .Children }}
-            {{ partial "mun-nav" . }}
+          {{ range .Children }}
+            li
+              a href="{{ .URL }}" class="{{ if ($.IsMenuCurrent "main" .) }}leftnavon{{ end }}" {{ .Name }}
           {{ end }}
       {{ end }}
-  {{ end }}
+    {{ end }}
+{{ end }}
