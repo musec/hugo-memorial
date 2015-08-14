@@ -1,11 +1,7 @@
 #footer
   #footerText
     {{ HTML "Copyright &copy; " }}
-    {{ if .IsPage }}
-      {{ .Date.Format "2006" }}
-    {{ else }}
-      {{ .Site.LastChange.Format "2006" }}
-    {{ end }}
+    {{ .Site.Params.copyright_years }}
 
     {{ HTML "&nbsp;" }}
 
