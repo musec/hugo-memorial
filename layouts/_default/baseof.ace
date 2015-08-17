@@ -6,33 +6,58 @@ html lang=en
     = yield extra_header_content
 
   body
-    #uber
-      #sububer
-        #pageContent
-          {{ partial "mun-header" . }}
+    #wrapper
+      #container-custom
+        #site-title-container.row-fluid
+          .span12
+            #site-title
+              a href="{{ $.Site.BaseURL }}" {{ $.Site.Title }}
 
-          #content
-            #leftnav
-              #leftnavTop
-              #navcontainer
-                ul
-                  {{ partial "top-level-nav" . }}
-              #leftnavBottom
+        .row-fluid
+          .span12
+            #content-container
+              .row-fluid
+                #left-nav.span3.hidden-phone.well
+                  ul
+                    {{ partial "top-level-nav" . }}
 
-            #contentTop
-            #middle
-              {{ with .Params.logo }}
-                img class="pageLogo" src="{{ .src }}" alt="{{ .text }}"
-              {{ end }}
+                .span9
+                  {{ if $.IsPage }}
+                    {{ if not (eq .Type "index") }}
+                      ul.breadcrumb
+                        {{ range $.Site.Data.breadcrumbs.crumbs }}
+                          li
+                            a href="{{ .url }}" {{ .text }}
+                            span.divider /
+                        {{ end }}
 
-              h1 {{ .Title }}
+                        li
+                          a href="{{ $.Site.BaseURL }}" {{ $.Site.Title }}
+                          span.divider /
 
-              = yield main
-                | ERROR: template for {{ .LogicalName }} does not produce 'main'
+                        li {{ $.Title }}
+                    {{ end }}
+                  {{ end }}
 
-              = yield extra_body_content
-            .clear
+                  .row-fluid
 
-          #bottomSiteInclude
+                    {{ with .Params.logo }}
+                      img class="pageLogo" src="{{ .src }}" alt="{{ .text }}"
+                    {{ end }}
 
-          {{ partial "mun-footer" . }}
+                    h1 {{ .Title }}
+
+                    = yield main
+                      | ERROR: template for {{ .LogicalName }} does not produce 'main'
+
+                    = yield extra_body_content
+
+              .row-fluid.visible-phone
+                .span12
+                  #nav-tabs-container
+                    #tab1.tab-pane.active
+                      .mobile-menu
+                        ul.nav.nav-list
+                          {{ partial "top-level-nav" . }}
+
+    {{ partial "mun-footer" . }}

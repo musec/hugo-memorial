@@ -1,5 +1,1 @@
-ul
-  li
-    a href="{{ .Site.BaseURL }}" class="{{ if eq .Title $.Site.Title }}leftnavon{{ end }}" {{ .Site.Title }}
-
-  {{ partial "mun-nav" . }}
+{{ partial "mun-nav" . }}

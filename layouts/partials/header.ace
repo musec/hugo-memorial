@@ -1,17 +1,55 @@
 title {{ .Title }}
-meta http-equiv="Content-Type" content="text/html;charset=utf-8"
+meta charset="utf-8"
+meta name="viewport" content="width=device-width, initial-scale=1.0"
+meta name="title" content="{{ $.Title }}"
+meta name="author" content="{{ $.Site.Params.author }}"
+meta name="description" content="{{ $.Site.Params.description }}"
+meta name="keywords" content="{{ $.Site.Params.keywords }}"
+meta name="Copyright" content="Copyright (c) {{ $.Site.Params.copyright_years }} {{ $.Site.Params.author }}"
 
-{{ $mun_style := "//www.mun.ca/appinclude/brand/2011v1/include/styles" }}
+// Favicon
+link rel="apple-touch-icon" sizes="57x57" href="//clf.mun.ca/favicon/apple-touch-icon-57x57.png"
+link rel="apple-touch-icon" sizes="114x114" href="//clf.mun.ca/favicon/apple-touch-icon-114x114.png"
+link rel="apple-touch-icon" sizes="72x72" href="//clf.mun.ca/favicon/apple-touch-icon-72x72.png"
+link rel="apple-touch-icon" sizes="144x144" href="//clf.mun.ca/favicon/apple-touch-icon-144x144.png"
+link rel="apple-touch-icon" sizes="60x60" href="//clf.mun.ca/favicon/apple-touch-icon-60x60.png"
+link rel="apple-touch-icon" sizes="120x120" href="//clf.mun.ca/favicon/apple-touch-icon-120x120.png"
+link rel="apple-touch-icon" sizes="76x76" href="//clf.mun.ca/favicon/apple-touch-icon-76x76.png"
+link rel="apple-touch-icon" sizes="152x152" href="//clf.mun.ca/favicon/apple-touch-icon-152x152.png"
+link rel="apple-touch-icon" sizes="180x180" href="//clf.mun.ca/favicon/apple-touch-icon-180x180.png"
+link rel="icon" type="image/png" href="//clf.mun.ca/favicon/favicon-192x192.png" sizes="192x192"
+link rel="icon" type="image/png" href="//clf.mun.ca/favicon/favicon-160x160.png" sizes="160x160"
+link rel="icon" type="image/png" href="//clf.mun.ca/favicon/favicon-96x96.png" sizes="96x96"
+link rel="icon" type="image/png" href="//clf.mun.ca/favicon/favicon-16x16.png" sizes="16x16"
+link rel="icon" type="image/png" href="//clf.mun.ca/favicon/favicon-32x32.png" sizes="32x32"
+meta name="msapplication-TileColor" content="#ffffff"
+meta name="msapplication-TileImage" content="//clf.mun.ca/favicon/mstile-144x144.png"
+
+// CSS
+{{ $ece := "//www.mun.ca/engineering/ece/include" }}
 {{ $style_base := .Site.BaseURL }}
 
-link rel="stylesheet" href="{{ $mun_style }}/base.css"
-link rel="stylesheet" href="{{ $mun_style }}/structure.css?1315478976"
-link rel="stylesheet" href="{{ $mun_style }}/content.css"
-link rel="stylesheet" href="{{ $mun_style }}/interior.css"
-link rel="stylesheet" href="{{ $mun_style }}/news.css"
-link rel="stylesheet" href="{{ $mun_style }}/icalendar.css"
+link rel="stylesheet" type="text/css" href="//clf.mun.ca/bootstrap/2.2.2/css/bootstrap-combo.min.css"
+link rel="stylesheet" type="text/css" href="//clf.mun.ca/jquery/ui/1.10.2/css/smoothness/jquery-ui-1.10.2.custom.css"
+link href="{{ $ece }}/modern-responsive.css" rel="stylesheet" type="text/css"
+link href="{{ $ece }}/instance.css" rel="stylesheet" type="text/css" media="screen"
+link href="{{ $ece }}/mrprint.css" rel="stylesheet" type="text/css" media="print"
+
 link rel="stylesheet" href="{{ $style_base }}/css/hugo-memorial.css"
 
 {{ range .Site.Params.extra_style }}
   link rel="stylesheet" href="{{ $style_base }}/{{ . }}"
 {{ end }}
+
+// Javascript
+script type="text/javascript" src="//clf.mun.ca/jquery/jquery-1.9.1.min.js"
+script type="text/javascript" src="//clf.mun.ca/jquery/ui/1.10.2/jquery-ui-1.10.2.custom.min.js"
+script type="text/javascript" src="//clf.mun.ca/templates/masthead/v1/v1.0.0/masthead-autoload.min.js?1" data="responsive|has-bootstrap-body"
+script type="text/javascript" src="//clf.mun.ca/bootstrap/2.2.2/js/bootstrap.min.js"
+script src="{{ $ece }}/instance.js"
+
+= javascript
+  var ccJQuerySS_basepath = '{{ $ece }}include/_banners/1/';
+
+= conditionalComment hidden lt IE 9
+  script src="//clf.mun.ca/misc/html5shiv/html5shiv-3.6.2.js"

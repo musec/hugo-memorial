@@ -1,12 +1,23 @@
-#footer
-  #footerText
-    {{ HTML "Copyright &copy; " }}
-    {{ .Site.Params.copyright_years }}
+#footer-container
+  #footer
+    #footer-copyright
+      {{ HTML "Copyright &copy; " }}
+      {{ .Site.Params.copyright_years }}
 
-    {{ HTML "&nbsp;" }}
+      {{ HTML "&nbsp;" }}
 
-    {{ if .Params.author }}
-      {{ .Params.author }}
-    {{ else }}
-      {{ .Site.Params.author }}
-    {{ end }}
+      {{ if .Params.author }}
+        {{ .Params.author }}
+      {{ else }}
+        {{ .Site.Params.author }}
+      {{ end }}
+
+    #footer-links
+      a href="http://www.mun.ca/people_departments/a_z_listing.php" A-Z listing |  
+      a href="http://www.mun.ca/marcomm/web/" About mun.ca |  
+      a href="http://www.mun.ca/marcomm/units/web_content/policies/accessibility.php" Accessibility |  
+      a href="http://www.mun.ca/humanres/careers/" Careers |  
+      a href="http://www.mun.ca/people_departments/" Contact |  
+      a href="http://www.mun.ca/emergency/" Emergency |  
+      a href="http://www.mun.ca/marcomm/web/privacy.php" Privacy |  
+      a href="../feedback.php" Web Feedback
