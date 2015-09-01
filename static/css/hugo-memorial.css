@@ -1,6 +1,6 @@
 body #wrapper {
-  background-image: none;
-  background: linear-gradient(to bottom, #404040 60px, white 0%);
+  background-image: url("../images/head-background.png");
+  background-repeat: repeat-x;
 }
 #site-title-container {
   padding: .5em;
