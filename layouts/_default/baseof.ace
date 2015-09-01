@@ -22,25 +22,7 @@ html lang=en
                     {{ partial "top-level-nav" . }}
 
                 .span9
-                  {{ if $.IsPage }}
-                    {{ if not (eq .Type "index") }}
-                      ul.breadcrumb
-                        {{ range $.Site.Data.breadcrumbs.crumbs }}
-                          li
-                            a href="{{ .url }}" {{ .text }}
-                            span.divider /
-                        {{ end }}
-
-                        li
-                          a href="{{ $.Site.BaseURL }}" {{ $.Site.Title }}
-                          span.divider /
-
-                        li {{ $.Title }}
-                    {{ end }}
-                  {{ end }}
-
                   .row-fluid
-
                     {{ with .Params.logo }}
                       img class="pageLogo" src="{{ .src }}" alt="{{ .text }}"
                     {{ end }}
