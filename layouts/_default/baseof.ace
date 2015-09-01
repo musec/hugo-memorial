@@ -42,4 +42,4 @@ html lang=en
                         ul.nav.nav-list
                           {{ partial "top-level-nav" . }}
 
-    {{ partial "mun-footer" . }}
+    {{ partial "footer" . }}
