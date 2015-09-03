@@ -15,8 +15,7 @@ html lang=en
             #leftnav
               #leftnavTop
               #navcontainer
-                ul
-                  {{ partial "top-level-nav" . }}
+                {{ partial "top-level-nav" . }}
               #leftnavBottom
 
             #contentTop
