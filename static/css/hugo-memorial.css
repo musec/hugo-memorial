@@ -3,7 +3,10 @@ body #wrapper {
   background-repeat: repeat-x;
 }
 #site-title-container {
-  padding: .5em;
+  min-height: 32px;
+}
+#site-title {
+  margin-top: 4px;
 }
 #header_title_text a {
   color: #fff;
