@@ -43,3 +43,5 @@ html lang=en
                           {{ partial "top-level-nav" . }}
 
     {{ partial "footer" . }}
+
+  {{ partial "extra-footer" . }}
