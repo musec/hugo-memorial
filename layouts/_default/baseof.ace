@@ -27,7 +27,9 @@ html lang=en
                       img class="pageLogo" src="{{ .src }}" alt="{{ .text }}"
                     {{ end }}
 
-                    h1 {{ .Title }}
+                    {{ if (not .Params.customTitle) }}
+                      h1 {{ .Title }}
+                    {{ end }}
 
                     = yield main
                       | ERROR: template for {{ .LogicalName }} does not produce 'main'
