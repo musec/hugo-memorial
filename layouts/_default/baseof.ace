@@ -33,7 +33,7 @@ html lang=en
                 .span9
                   .row-fluid
                     {{ with .Params.logo }}
-                      img class="pageLogo" src="{{ .src }}" alt="{{ .text }}"
+                      img class="pageLogo" src="{{ .src }}" alt="{{ .text }}" width="{{ .width }}"
                     {{ end }}
 
                     {{ if (not .Params.customTitle) }}
