@@ -58,16 +58,6 @@ supplying `extra_header_content` and `extra_body_content`:
 = content extra_header_content
   script src="{{ $.BaseURL }}js/jquery.min.js"
 
-  {{ if .Params.mathjax }}
-      script. type="text/x-mathjax-config"
-      MathJax.Hub.Config({
-        showProcessingMessages: false,
-        tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
-      });
-
-    script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX"
-  {{ end }}
-
 = content extra_body_content
   p
     ||
