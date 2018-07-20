@@ -35,6 +35,8 @@ link href="{{ $ece }}/modern-responsive.css" rel="stylesheet" type="text/css"
 link href="{{ $ece }}/instance.css" rel="stylesheet" type="text/css" media="screen"
 link href="{{ $ece }}/mrprint.css" rel="stylesheet" type="text/css" media="print"
 
+link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+
 link rel="stylesheet" href="{{ $style_base }}/css/hugo-memorial.css"
 
 {{ range .Site.Params.extra_style }}
